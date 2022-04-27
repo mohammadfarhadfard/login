@@ -6,20 +6,20 @@
 <body>
     
 <?php
-$servername = "localhost"
+$Hostname = "localhost"
 $username = "root"
 $password = ""
-$dbname = "form1-db"
+$dbname = "test"
 
 $username = $_POST['user_1'];
 $password = $_POST['pass_1']
 
-$conn = new mysqli ($serveername,$username, $password, $dbname ) ;
+$conn = new mysqli ($Hostname,$username, $password, $dbname ) ;
 if ($conn->connect-error) {
     die("connection failed: " . $conn->connect_error) ;
 }
 $conn->set_charset("utf8") ;
-$sql = "INSERT INTO `form1`(`username`, `password`) VALUES ('$servername' , '$username' ) " ;
+$sql = "INSERT INTO `form1` (`username`, `password`) VALUES ('$username' , '$password' ) " ;
 if ($conn->query($sql) ---TRUE) {
 echo "done,ok"
 }else{

@@ -13,5 +13,5 @@ function validation () {
     alert("password must be longer than six characters")
     return false;
   }
-  alert("done")
+//   alert("done")
 }
